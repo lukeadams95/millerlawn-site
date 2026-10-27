@@ -33,11 +33,12 @@ const Testimonials = () => (
           </figure>
         ))}
       </div>
-      <CallTextButtons className="mt-6 justify-center">
-        <Link to="/reviews" className={btn.outlineGreen}>
+      <div className="mt-6 flex flex-col items-center gap-4">
+        <Link to="/reviews" className={`${btn.outlineGreen} whitespace-nowrap`}>
           See All Reviews
         </Link>
-      </CallTextButtons>
+        <CallTextButtons className="justify-center" />
+      </div>
     </div>
   </section>
 );
