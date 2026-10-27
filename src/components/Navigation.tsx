@@ -66,7 +66,14 @@ const ServicesDropdown = ({ active }: { active: boolean }) => {
               key={s.path}
               to={s.path}
               onClick={() => setOpen(false)}
-              className="text-ink hover:text-ink px-4 py-3.5 rounded-[10px] font-bold text-[19px] flex items-center gap-3.5 whitespace-nowrap hover:bg-[rgba(95,171,73,.14)]"
+              aria-current={pathname === s.path ? "page" : undefined}
+              className={cn(
+                "text-ink hover:text-ink px-4 py-3.5 rounded-[10px] font-bold text-[19px] flex items-center gap-3.5 whitespace-nowrap",
+                // Current page: gold highlight matching the nav underline
+                pathname === s.path
+                  ? "bg-gold/[.18] shadow-[inset_4px_0_0_#E8B431]"
+                  : "hover:bg-[rgba(95,171,73,.14)]",
+              )}
             >
               <Icon d={s.icon} size={26} color="#5FAB49" strokeWidth={1.6} />
               {s.menuLabel ?? s.name}
@@ -131,7 +138,9 @@ const MobileMenu = ({ onClose, isActive }: { onClose: () => void; isActive: (pat
                 key={s.path}
                 to={s.path}
                 onClick={onClose}
+                aria-current={isActive(s.path) ? "page" : undefined}
                 className="text-white hover:text-white py-3 font-semibold border-b border-white/[.18]"
+                style={activeShadow(s.path)}
               >
                 › {s.name}
               </Link>
