@@ -2,7 +2,7 @@ import lawn1 from "@/assets/lawn-1.webp";
 import lawn2 from "@/assets/lawn-2.webp";
 import lawn3 from "@/assets/lawn-3.webp";
 import lawn4 from "@/assets/lawn-4.webp";
-import { Accent, H2Large, SectionIntro } from "@/components/site/blocks";
+import { Accent, CallTextButtons, H2Large, SectionIntro } from "@/components/site/blocks";
 
 const photos = [
   { src: lawn1, alt: "Freshly mowed Kansas City lawn with clean edges" },
@@ -33,6 +33,7 @@ const RecentWork = () => (
           />
         ))}
       </div>
+      <CallTextButtons className="mt-12 justify-center" />
     </div>
   </section>
 );

@@ -38,7 +38,30 @@ export const btn = {
   heroOutline: `${btnBase} px-9 py-4 text-white border-2 border-white/70 hover:bg-white hover:text-ink`,
   solid: `${btnBase} px-9 py-4 bg-brand text-white hover:bg-brand-light hover:text-white`,
   white: `${btnBase} px-9 py-4 bg-white text-brand hover:bg-[#E8F5DF] hover:text-brand-dark`,
+  outlineGreen: `${btnBase} px-8 py-4 text-brand-dark border-2 border-brand hover:bg-brand hover:text-white`,
 };
+
+// The hero's two calls to action, reused across homepage sections. `onDark` uses the hero's
+// own styles for photo and deep green backgrounds; extra buttons (children) follow in the same row.
+export const CallTextButtons = ({
+  onDark,
+  className,
+  children,
+}: {
+  onDark?: boolean;
+  className?: string;
+  children?: ReactNode;
+}) => (
+  <div className={cn("flex gap-4 flex-wrap", className)}>
+    <a href={PHONE_TEL} className={onDark ? btn.heroPrimary : btn.primary}>
+      Call {PHONE_DISPLAY}
+    </a>
+    <a href={PHONE_SMS} className={onDark ? btn.heroOutline : btn.outlineGreen}>
+      Text Us Today
+    </a>
+    {children}
+  </div>
+);
 
 /* ---------- Headings ---------- */
 

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import christmasImage from "@/assets/christmas-lights-1.jpg";
-import { Accent, DiamondList, btn } from "@/components/site/blocks";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { Accent, CallTextButtons, DiamondList, btn } from "@/components/site/blocks";
 
 const highlights = [
   "Custom design for your home or business",
@@ -28,20 +27,11 @@ const HolidayPromo = () => (
             enjoy the season. Book early to lock in your install date.
           </p>
           <DiamondList items={highlights} className="mb-8" />
-          <div className="flex gap-4 flex-wrap">
-            <a
-              href={PHONE_TEL}
-              className="bg-brand text-white px-7 py-3.5 rounded-[10px] font-bold border-2 border-brand hover:bg-brand-light hover:border-brand-light hover:text-white transition-colors"
-            >
-              Call {PHONE_DISPLAY}
-            </a>
-            <Link
-              to="/services/christmas-lights"
-              className="text-brand-dark px-7 py-3.5 rounded-[10px] font-bold border-2 border-brand hover:bg-brand hover:text-white transition-colors"
-            >
+          <CallTextButtons>
+            <Link to="/services/christmas-lights" className={btn.outlineGreen}>
               See Our Light Displays
             </Link>
-          </div>
+          </CallTextButtons>
         </div>
         <div className="relative flex-[1_1_380px] min-h-[420px] bg-ink">
           <img

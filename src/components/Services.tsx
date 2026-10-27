@@ -5,7 +5,7 @@ import lawn2 from "@/assets/lawn-2.webp";
 import lawn3 from "@/assets/lawn-3.webp";
 import lawn4 from "@/assets/lawn-4.webp";
 import christmasImage from "@/assets/christmas-lights-1.jpg";
-import { Accent, H2Large, Icon, Section, SectionIntro, btn } from "@/components/site/blocks";
+import { Accent, CallTextButtons, H2Large, Icon, Section, SectionIntro, btn } from "@/components/site/blocks";
 import { ICONS } from "@/lib/site";
 
 const services = [
@@ -133,11 +133,11 @@ const Services = () => {
           </ServiceCard>
         ))}
       </ServiceCardRow>
-      <div className="mt-12 text-center">
+      <CallTextButtons onDark className="mt-12 justify-center">
         <Link to="/services" className={btn.white}>
           View All Services
         </Link>
-      </div>
+      </CallTextButtons>
     </Section>
   );
 };

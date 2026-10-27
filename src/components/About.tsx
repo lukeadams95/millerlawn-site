@@ -1,5 +1,5 @@
 import lawn3 from "@/assets/lawn-3.webp";
-import { Accent, Callout } from "@/components/site/blocks";
+import { Accent, CallTextButtons, Callout } from "@/components/site/blocks";
 
 const values = [
   { title: "Integrity", description: "Honest pricing and transparent service from a retired firefighter" },
@@ -27,6 +27,7 @@ const About = () => (
               we've built trust across Kansas City commercial contracts and residential clients alike.
             </p>
             <Callout>Your property deserves a team that shows up on time, communicates clearly, and delivers results.</Callout>
+            <CallTextButtons className="mt-8" />
           </div>
           <div className="order-1 relative min-h-[480px] bg-ink">
             <img
@@ -62,6 +63,7 @@ const About = () => (
             </div>
           ))}
         </div>
+        <CallTextButtons className="mt-16 justify-center" />
       </div>
     </section>
   </>

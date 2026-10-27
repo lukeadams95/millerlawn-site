@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Accent, H2Large, SectionIntro, Stars, btn } from "@/components/site/blocks";
+import { Accent, CallTextButtons, H2Large, SectionIntro, Stars, btn } from "@/components/site/blocks";
 import { REVIEWS } from "@/lib/reviews";
 
 // Homepage masonry of the first nine reviews
@@ -33,11 +33,11 @@ const Testimonials = () => (
           </figure>
         ))}
       </div>
-      <div className="mt-6 text-center">
-        <Link to="/reviews" className={btn.solid}>
+      <CallTextButtons className="mt-6 justify-center">
+        <Link to="/reviews" className={btn.outlineGreen}>
           See All Reviews
         </Link>
-      </div>
+      </CallTextButtons>
     </div>
   </section>
 );
