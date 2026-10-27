@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects. Routes are prerendered to static .html files, so no SPA
+# catch-all rewrite is needed; unknown URLs get dist/404.html with a real 404 status.
+
+# The old "Hardscapes" menu item pointed here; that page never existed.
+/services/hardscapes  /services  301
