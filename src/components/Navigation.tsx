@@ -101,7 +101,7 @@ const MobileMenu = ({ onClose, isActive }: { onClose: () => void; isActive: (pat
       aria-modal="true"
       aria-label="Site menu"
     >
-      <div className="px-5 py-2 flex items-center justify-between">
+      <div className="px-8 py-2 flex items-center justify-between">
         <Link to="/" onClick={onClose} className="block bg-white rounded-xl px-3 py-1.5">
           <img src={logo} alt={LOGO_ALT} className="h-[52px] w-auto block" />
         </Link>
@@ -186,7 +186,7 @@ const Navigation = () => {
 
       {/* Desktop tier 1: white info bar with the logo badge hanging into the green nav */}
       <div className="hidden nav:block relative z-[70] bg-white">
-        <div className="max-w-[1280px] mx-auto px-8 h-20 flex items-center gap-7 relative">
+        <div className="max-w-[1344px] mx-auto px-8 h-20 flex items-center gap-7 relative">
           <div className="w-[150px] flex-none" />
           <div className="flex-1 flex items-center justify-center gap-7">
             {infoBlocks.map((b, i) => (
@@ -233,7 +233,7 @@ const Navigation = () => {
             pinned ? "fixed h-[72px]" : "absolute h-[52px]",
           )}
         >
-          <nav className="relative max-w-[1280px] h-full mx-auto px-8 flex items-stretch" aria-label="Main">
+          <nav className="relative max-w-[1344px] h-full mx-auto px-8 flex items-stretch" aria-label="Main">
             <div
               className={cn(
                 "w-[190px] flex-none flex items-center transition-opacity duration-[250ms]",
@@ -275,7 +275,7 @@ const Navigation = () => {
               href={REVIEW_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="self-stretch -mr-8 pl-11 pr-8 bg-brand-light text-white hover:text-white hover:brightness-110 flex items-center font-bold text-[15.5px] tracking-[1.2px] uppercase whitespace-nowrap [clip-path:polygon(22px_0,100%_0,100%_100%,0_100%)]"
+              className="self-stretch pl-11 pr-8 bg-brand-light text-white hover:text-white hover:brightness-110 flex items-center font-bold text-[15.5px] tracking-[1.2px] uppercase whitespace-nowrap [clip-path:polygon(22px_0,100%_0,100%_100%,0_100%)]"
             >
               Write A Review ★
             </a>
@@ -285,7 +285,7 @@ const Navigation = () => {
 
       {/* Mobile header */}
       <div className="nav:hidden sticky top-0 z-[80] bg-white shadow-[0_2px_12px_rgba(0,0,0,.12)]">
-        <div className="px-5 py-2 flex items-center justify-between gap-3">
+        <div className="px-8 py-2 flex items-center justify-between gap-3">
           <Link to="/" className="block bg-white rounded-xl shadow-[0_4px_14px_rgba(38,42,39,.15)] px-3 py-1.5">
             <img src={logo} alt={LOGO_ALT} className="h-[52px] w-auto block" />
           </Link>
