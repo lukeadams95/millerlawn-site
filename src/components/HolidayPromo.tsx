@@ -27,11 +27,13 @@ const HolidayPromo = () => (
             enjoy the season. Book early to lock in your install date.
           </p>
           <DiamondList items={highlights} className="mb-8" />
-          <CallTextButtons>
-            <Link to="/services/christmas-lights" className={btn.outlineGreen}>
+          {/* Sized to the Call / Text pair so the light displays link centres beneath it */}
+          <div className="self-start flex flex-col items-center gap-4">
+            <CallTextButtons className="justify-center" />
+            <Link to="/services/christmas-lights" className={`${btn.outlineGreen} whitespace-nowrap max-sm:px-6`}>
               See Our Light Displays
             </Link>
-          </CallTextButtons>
+          </div>
         </div>
         <div className="relative flex-[1_1_380px] min-h-[420px] bg-ink">
           <img
